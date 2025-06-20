@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spoofing Detection Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+    }
+
+    header {
+      background-color: #4a90e2;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1526378722782-6c3d8a2e1f94') no-repeat center center/cover;
+      height: 300px;
+      position: relative;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 40px 20px;
+      background-color: #ffffff;
+    }
+
+    .feature {
+      flex: 1 1 250px;
+      margin: 10px;
+      padding: 20px;
+      background-color: #e8f0fe;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .feature h3 {
+      margin-top: 10px;
+    }
+
+    .feature-icon {
+      font-size: 40px;
+    }
+
+    .table-section {
+      padding: 40px 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ccc;
+    }
+
+    th {
+      background-color: #d9e9ff;
+    }
+
+    footer {
+      background-color: #4a90e2;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 1.8rem;
+        padding: 10px;
+      }
+
+      .features {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      th {
+        display: none;
+      }
+
+      td {
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+      }
+
+      td::before {
+        position: absolute;
+        left: 10px;
+        content: attr(data-label);
+        font-weight: bold;
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Spoofing Detection Dashboard</h1>
+  </header>
+
+  <section class="hero">
+    <h1>Monitor Suspicious Network Activity in Real Time</h1>
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <div class="feature-icon">🛡️</div>
+      <h3>Real-Time Detection</h3>
+      <p>Capture spoofing attempts instantly and log all unauthorized IP-MAC mismatches.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">📊</div>
+      <h3>Clear Logs</h3>
+      <p>View detailed tables of all spoofing events with timestamps and explanations.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">💡</div>
+      <h3>Simple Interface</h3>
+      <p>Designed to be clean and mobile-friendly with no setup overhead or clutter.</p>
+    </div>
+  </section>
+
+  <section class="table-section">
+    <h2>Spoofing Logs</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Timestamp</th>
+          <th>IP Address</th>
+          <th>MAC Address</th>
+          <th>Reason</th>
+        </tr>
+      </thead>
+      <tbody id="logTable">
+        <!-- Spoofing logs will be dynamically inserted here via Flask -->
+      </tbody>
+    </table>
+  </section>
+
+  <footer>
+    &copy; 2025 Network Security Monitor. All rights reserved.
+  </footer>
+
+</body>
+</html>
