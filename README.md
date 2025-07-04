@@ -1,4 +1,4 @@
-# IP spoof detector By Firaz M MN & BA Afri Ahamed
+# IP spoof detector By Firaz M MN & Ahamed BAA
 
 Spoof Detector – Real-Time ARP Spoofing Detection System
 
