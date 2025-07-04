@@ -1,6 +1,7 @@
 # IP spoof detector By Firaz M MN & BA Afri Ahamed
 
 Spoof Detector – Real-Time ARP Spoofing Detection System
+
 Tech Stack: Python, Scapy, NetfilterQueue, SQLite, Flask, Linux
 
 Developed a real-time ARP spoofing detection and prevention tool for Linux environments.
